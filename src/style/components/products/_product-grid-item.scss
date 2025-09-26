@@ -1,0 +1,92 @@
+.product-grid-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+
+
+    &:hover {
+
+        .title {
+            color: var(--color-orange);
+        }
+    }
+
+    &-image {
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+        border-radius: 12px;
+        margin-bottom: 12px;
+
+        @media(min-width:576px) {
+            max-height: 256px;
+        }
+        @media(min-width:768px){
+
+            max-width: 256px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        padding: 12px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        line-break: anywhere;
+
+         @media(min-width:768px) {
+            max-width: 256px;
+        }
+
+        .title {
+            color: var(--color-dark);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            display: inline-block;
+            margin-bottom: 12px;
+            text-align: left;
+            transition: .3s all ease;
+        }
+
+        .subtitle {
+            color: var(--color-grey);;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: left;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .price {
+            color: var(--color-dark);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .series-info {
+            color: var(--color-grey);;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+}

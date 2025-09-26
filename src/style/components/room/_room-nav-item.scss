@@ -1,0 +1,49 @@
+.navbar-room-item {
+    gap: 8px;
+    display: none;
+
+    @media(min-width:992px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nri-content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        .price {
+            display: inline-block;
+            color: var(--color-dark);
+            text-align: right;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .date {
+            display: inline-block;
+            color: var(--color-grey);;
+            text-align: right;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+        }
+    }
+}

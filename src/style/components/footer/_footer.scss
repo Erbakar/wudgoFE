@@ -1,0 +1,106 @@
+.footer {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    margin-top: 24px;
+
+
+    @media(max-width:576px) {
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.10));
+    }
+
+    .page-container--inner {
+        padding: 48px 38px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+
+        @media(min-width:576px) {
+            flex-direction: row;
+        }
+
+
+        @media(min-width:992px) {
+            padding: 48px 20px;
+            flex-direction: wrap;
+        }
+
+
+        .footer-links-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            max-width: 256px;
+            width: 100%;
+            margin-bottom: 36px;
+
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media(min-width:576px) {
+                width: 50%;
+                max-width: unset;
+            }
+
+            @media(min-width:992px) {
+                max-width: 256px;
+                margin-bottom: 0;
+                width: 100%;
+            }
+
+            &:last-child {
+                padding: 0;
+            }
+
+
+
+            h5 {
+                color: var(--color-grey);;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                margin-bottom: 24px;
+                line-height: normal;
+                display: block;
+                width: 100%;
+            }
+
+
+
+            ul {
+                list-style: none;
+                padding: 0;
+                padding-right: 10px;
+                margin-bottom: 12px;
+
+
+                li {
+                    margin-bottom: 12px;
+
+                        &:last-child {
+                            margin-bottom: 24px;
+                        }
+
+                    a {
+                        color: var(--color-grey);;
+                        text-decoration: none;
+                        font-size: 17px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+}

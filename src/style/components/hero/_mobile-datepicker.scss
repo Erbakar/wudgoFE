@@ -1,0 +1,28 @@
+.mobile-datepicker {
+
+    .page-container--inner {
+        justify-content: center;
+        align-items: center;
+        padding: 38px 38px;
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width:992px) {
+            display: none;
+        }
+
+
+        .datepicker {
+            width: 100%;
+            margin: 0;
+            
+            &:nth-child(2){
+                margin-top:12px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}

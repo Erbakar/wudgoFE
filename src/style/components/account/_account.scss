@@ -1,0 +1,43 @@
+.account {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    min-height: 100vh;
+
+    .page-container--inner {
+        padding: 48px 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            @media(min-width:992px) {
+                max-width: 540px;
+            }
+
+            form{
+                width: 100%;
+            }
+
+            h1 {
+                color: var(--color-orange);
+                text-align: center;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 48px;
+            }
+        }
+
+
+    }
+}

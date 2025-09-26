@@ -1,0 +1,101 @@
+.categories-slider-container {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    
+    @media(min-width:992px){
+        background-color: #FAFAFA;
+    }
+
+    .page-container--inner {
+        padding: 18px 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media(min-width:992px){
+            padding: 38px 20px;
+        }
+
+
+
+        .categories-slider {
+            max-width: 700px;
+            width: 100%;
+
+
+            .splide__track {
+                width: 100%;
+                padding: 0 20px !important;
+
+                @media(min-width:992px){
+                    padding: 0;
+                }
+
+                .splide__slide {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 12px;
+
+                        img {
+                            height: 40px;
+                        }
+                    }
+
+                    span {
+                        color: var(--color-dark);
+                        text-align: center;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+
+
+            }
+
+            .splide__arrow {
+                background-color: transparent;
+                padding: 0;
+                width: 24px;
+                height: 24px;
+                transition: .3s all ease;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    fill: transparent;
+                }
+
+
+                &.splide__arrow--prev {
+                    left: 0px;
+                    transform: translateY(-50%) rotate(180deg);
+
+                    @media(min-width:992px){
+                        left: -50px;
+                    }
+                }
+
+                &.splide__arrow--next {
+                    right: 0px;
+
+                    @media(min-width:992px){
+                        right: -50px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

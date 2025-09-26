@@ -1,0 +1,40 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+//components
+@import './theme/theme';
+@import './components/header/navbar';
+@import './components/hero/hero';
+@import './components/hero/mobile-datepicker';
+@import './components/hero/categories';
+@import './components/products/product-grid';
+@import './components/products/product-grid-items-sec';
+@import './components/products/product-grid-item';
+@import './components/footer/footer';
+@import './components/footer/copyright';
+@import './components/snackbar';
+
+//search results
+@import './components/products/search-results-top';
+@import './components/products/search-results-iframe';
+
+
+//room teaser
+@import './components/room/room';
+
+
+//payment
+@import './components/payment/payment';
+
+
+//form
+@import './components/form/form';
+
+
+//acccount
+@import './components/account/account';
+
+
+//content pages
+@import './components/content/content-pages';
+
