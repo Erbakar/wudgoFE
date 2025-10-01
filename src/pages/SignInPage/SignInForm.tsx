@@ -1,9 +1,11 @@
+// SignInForm.tsx code:
+
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useSnackbar } from 'notistack';
 import { useForm, type SubmitHandler, } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { z } from 'zod';
-import { useAuthContext } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import routes from '../../routes';
 import { useAuthenticate } from '../../services/authenticate';
 
@@ -16,9 +18,10 @@ export function SignInForm() {
 
   const CompanyDetailSchema = z.object({
     emailAddress: z
-      .email({ error: "Geçersiz e-posta adresi" })
-      .min(1, { message: ('E-posta adresi gerekli') }),
-    password: z.string().min(1, ('Parola gerekli')),
+      // .email({ error: "Geçersiz e-posta adresi" })
+      .email({ error: "Invalid e-mail address" })
+      .min(1, { message: ('E-mail required') }),
+    password: z.string().min(1, ('Password required')),
   });
 
   type Values = z.infer<typeof CompanyDetailSchema>;
@@ -36,7 +39,6 @@ export function SignInForm() {
   const {
     register,
     handleSubmit,
-    // watch,
     formState: { errors },
   } = methods;
 
@@ -44,7 +46,7 @@ export function SignInForm() {
   const { enqueueSnackbar } = useSnackbar();
   const { isPending, mutateAsync } = useAuthenticate();
 
-  const { signIn } = useAuthContext();
+  const { signIn } = useAuth();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const response = await mutateAsync({
@@ -61,8 +63,8 @@ export function SignInForm() {
       });
     }
     else if (!!response[0].isSuccessful) {
-      signIn(response[0].data.token);
-      enqueueSnackbar("Giriş yapıldı.", {
+      signIn(response[0].data);
+      enqueueSnackbar("Giriş yapıldı. Ana Sayfa'ya yönlendiriliyorsunuz.", {
         variant: 'success',
       });
       setTimeout(() => {

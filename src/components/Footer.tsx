@@ -9,13 +9,13 @@ export default function () {
         <div className="page-container--inner">
           <div className="footer-links-item">
             <h5>
-              Explore Boddop
+              Explore Wudgo
             </h5>
 
             <ul>
               <li>
                 <a href="#">
-                  Boddop account
+                  Wudgo account
                 </a>
               </li>
               <li>
@@ -45,14 +45,14 @@ export default function () {
               </li>
               <li>
                 <a href="#">
-                  First Boddop experience
+                  First Wudgo experience
                 </a>
               </li>
             </ul>
           </div>
           <div className="footer-links-item">
             <h5>
-              About Boddop
+              About Wudgo
             </h5>
 
             <ul>
@@ -102,7 +102,7 @@ export default function () {
             <ul>
               <li>
                 <a href="#">
-                  info@boddop.com
+                  info@wudgo.com
                 </a>
               </li>
             </ul>

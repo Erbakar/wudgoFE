@@ -1,6 +1,8 @@
+// authenticate.ts code:
 import { useMutation } from '@tanstack/react-query';
 import type { UserDto } from '../contracts/UserDto';
 import { API_BASEURL, type ResponseModel } from './base';
+
 
 type Request = {
   email: string,
@@ -17,13 +19,14 @@ async function authenticate(request: Request): Promise<[ResponseModel<UserDto>, 
   });
 
   try {
-    const result = await response.json();
-    return [result as ResponseModel<UserDto>, response];
+    const result = await response.json() as ResponseModel<UserDto>;
+
+    return [result, response];
   }
   catch {
     return [{
       isSuccessful: false,
-      hasError:true,
+      hasError: true,
       errors: [
         "Unexpected error"
       ]

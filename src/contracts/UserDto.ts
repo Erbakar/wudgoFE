@@ -1,3 +1,5 @@
+import type { GenderType } from './Genders';
+
 export type UserDto = {
   id: number;
   firstName: string;
@@ -10,6 +12,8 @@ export type UserDto = {
   photo: string;
   isEmailConfirmed: boolean;
   isConfirmedStudent: boolean;
+  gender?: GenderType;
+  birthDate?:string;
 
   organization: any; // TODO: ResellerDto
 };

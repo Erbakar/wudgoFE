@@ -6,16 +6,16 @@ export default function TermsOfUsePage() {
         <div className="page-container--inner">
             <div className="content">
                 <h1>Terms of Use</h1>
-                <p className="last-updated">Last updated: December 2023</p>
+                <p className="last-updated">Last updated: January 2025</p>
                 
                 <div className="terms-section">
                     <h2>1. Acceptance of Terms</h2>
-                    <p>By accessing and using Boddop ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                    <p>By accessing and using Wudgo ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
                 </div>
 
                 <div className="terms-section">
                     <h2>2. Eligibility</h2>
-                    <p>Boddop is exclusively available to university students. To use our service, you must:</p>
+                    <p>Wudgo is exclusively available to university students. To use our service, you must:</p>
                     <ul>
                         <li>Be currently enrolled in an accredited university or college</li>
                         <li>Provide valid student identification when requested</li>
@@ -36,7 +36,7 @@ export default function TermsOfUsePage() {
 
                 <div className="terms-section">
                     <h2>4. Booking and Accommodation</h2>
-                    <p>Our platform connects students with accommodation providers. When booking through Boddop:</p>
+                    <p>Our platform connects students with accommodation providers. When booking through Wudgo:</p>
                     <ul>
                         <li>All bookings are subject to availability and confirmation</li>
                         <li>Prices are displayed in USD and include applicable taxes and fees</li>
@@ -74,17 +74,17 @@ export default function TermsOfUsePage() {
 
                 <div className="terms-section">
                     <h2>8. Intellectual Property</h2>
-                    <p>The service and its original content, features, and functionality are and will remain the exclusive property of Boddop and its licensors. The service is protected by copyright, trademark, and other laws.</p>
+                    <p>The service and its original content, features, and functionality are and will remain the exclusive property of Wudgo and its licensors. The service is protected by copyright, trademark, and other laws.</p>
                 </div>
 
                 <div className="terms-section">
                     <h2>9. Limitation of Liability</h2>
-                    <p>In no event shall Boddop, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.</p>
+                    <p>In no event shall Wudgo, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.</p>
                 </div>
 
                 <div className="terms-section">
                     <h2>10. Disclaimer</h2>
-                    <p>The information on this service is provided on an "as is" basis. To the fullest extent permitted by law, Boddop excludes all representations, warranties, conditions and terms relating to our service and the use of this service.</p>
+                    <p>The information on this service is provided on an "as is" basis. To the fullest extent permitted by law, Wudgo excludes all representations, warranties, conditions and terms relating to our service and the use of this service.</p>
                 </div>
 
                 <div className="terms-section">
@@ -106,7 +106,7 @@ export default function TermsOfUsePage() {
                     <h2>14. Contact Information</h2>
                     <p>If you have any questions about these Terms of Use, please contact us:</p>
                     <ul>
-                        <li><strong>Email:</strong> info@boddop.com</li>
+                        <li><strong>Email:</strong> info@wudgo.com</li>
                         <li><strong>Address:</strong> 592, 1007 N Orange St. 4th Floor, Wilmington, DE, New Castle, US, 19801</li>
                     </ul>
                 </div>

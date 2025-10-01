@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
         <div className="page-container--inner">
           <div className="content">
             <h1>Privacy Policy</h1>
-            <p className="last-updated">Last updated: December 2023</p>
+            <p className="last-updated">Last updated: January 2025</p>
 
             <div className="terms-section">
               <h2>1. Information We Collect</h2>
@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
               <h2>11. Contact Us</h2>
               <p>If you have any questions about this Privacy Policy, please contact us:</p>
               <ul>
-                <li><strong>Email:</strong> privacy@boddop.com</li>
+                <li><strong>Email:</strong> privacy@wudgo.com</li>
                 <li><strong>Address:</strong> 592, 1007 N Orange St. 4th Floor, Wilmington, DE, New Castle, US, 19801</li>
               </ul>
             </div>

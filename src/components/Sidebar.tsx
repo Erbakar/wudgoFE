@@ -1,8 +1,9 @@
+// Sidebar.tsx code:
+import * as React from 'react';
 import { Link, type LinkProps } from 'react-router';
+import { useAuth } from '../contexts/AuthContext';
 import { useNavigationContext } from '../contexts/NavigationContext';
 import routes from '../routes';
-import * as React from 'react';
-import { useAuthContext } from '../contexts/AuthContext';
 
 export default function () {
   const { isSidebarOpen, closeSidebar } = useNavigationContext();
@@ -19,7 +20,7 @@ export default function () {
     />
   };
 
-  const { token, signOut } = useAuthContext();
+  const { user, signOut } = useAuth();
 
 
   return (
@@ -39,16 +40,16 @@ export default function () {
             </div>
 
             {/* <!-- Authenticated account header (hidden by default) --> */}
-            {!!token && (
+            {!!user?.token && (
               <ul className="mobile-menu-items">
                 <li className="list-item">
                   <div className='info-section'>
                     <span>
-                      <strong>Welcome, John Doe</strong>
+                      <strong>Welcome, {user?.firstName.toString() + ' ' + user?.lastName.toString()}</strong>
                     </span>
 
                     <span>
-                      john.doe@university.edu
+                      {user?.email.toString()}
                     </span>
                   </div>
                 </li>
@@ -56,7 +57,7 @@ export default function () {
             )}
 
             {/* <!-- Guest account header (visible by default) --> */}
-            {!token && (
+            {!user?.token && (
               <ul className="mobile-menu-items">
                 <li className="list-item">
                   <SidebarLink to={routes.signIn.route()}>
@@ -85,10 +86,10 @@ export default function () {
                 </SidebarLink>
               </li>
 
-              {!!token && (
+              {!!user?.token && (
                 <>
                   <li className="list-item logged-in">
-                    <SidebarLink to={routes.signUp.route()}>
+                    <SidebarLink to={'#'}>
                       <span>
                         My Profile
                       </span>
@@ -114,11 +115,11 @@ export default function () {
 
 
               <li className="list-item logged-in">
-                <SidebarLink to={routes.signUp.route()}>
+                <a href="#">
                   <span>
                     Help Center
                   </span>
-                </SidebarLink>
+                </a>
               </li>
               <li className="list-item logged-in">
                 <SidebarLink to={routes.faq.route()}>
@@ -143,9 +144,9 @@ export default function () {
               </li>
 
 
-              {!!token && (
+              {!!user?.token && (
                 <li className="list-item">
-                  <a href='#' onClick={()=>signOut()} >
+                  <a href='#' onClick={() => signOut()} >
                     <span>
                       Sign Out
                     </span>
@@ -153,7 +154,7 @@ export default function () {
                 </li>
               )}
 
-              {/* <hr />
+              <hr />
 
               <li className="list-item">
                 <SidebarLink to={routes.emailConfirmation.route()}>
@@ -211,7 +212,7 @@ export default function () {
                     Signup Variation 2
                   </span>
                 </a>
-              </li> */}
+              </li>
 
             </ul>
           </div>

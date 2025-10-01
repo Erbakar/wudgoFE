@@ -8,7 +8,7 @@ export default function ForgotPasswordPage(){
         <div className="page-container--inner">
           <div className="content">
             <h1>
-              FORGOT PASSWORD BODDOP
+              FORGOT PASSWORD WUDGO
             </h1>
 
             <ForgotPasswordForm />

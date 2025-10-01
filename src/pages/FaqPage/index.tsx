@@ -13,18 +13,24 @@ export default function FaqPage() {
               <h2>General Questions</h2>
 
               <div className="faq-item">
-                <h3>What is Boddop?</h3>
-                <p>Boddop is a platform designed specifically for university students to find affordable accommodation and travel opportunities around the world. We connect students with budget-friendly rooms and experiences starting from just $12.</p>
+                <h3>What is Wudgo?</h3>
+                <p>
+                  Wudgo is a marketplace designed for students to book holiday accommodation at private student halls worldwide.
+                </p>
               </div>
 
               <div className="faq-item">
-                <h3>Who can use Boddop?</h3>
-                <p>Boddop is exclusively available for university students. You must be currently enrolled in a university to create an account and use our services.</p>
+                <h3>How do I book a room?</h3>
+                <p>
+                  It's easy to get started booking a room. Search through our comprehensive list of properties and book. Once you fill out the booking request form, a booking expert will contact you to begin the process of booking an accommodation. You can find out more on our 'How It Works' page.
+                </p>
               </div>
 
               <div className="faq-item">
-                <h3>How do I verify my student status?</h3>
-                <p>During registration, you'll need to provide your university email address and may be asked to upload a valid student ID or enrollment verification document.</p>
+                <h3>Do I need to be a student?</h3>
+                <p>
+                  Yes, Wudgo is only available for students.
+                </p>
               </div>
             </div>
 
@@ -32,46 +38,60 @@ export default function FaqPage() {
               <h2>Booking & Accommodation</h2>
 
               <div className="faq-item">
-                <h3>How do I book a room?</h3>
-                <p>Simply browse our available rooms, select your preferred dates and location, and complete the booking process. You'll receive a confirmation email with all the details.</p>
+                <h3>Can I choose specific move-in and move-out dates?</h3>
+                <p>
+                  Yes, we receive automated data feed from our accommodation providers.  You will be able to see the live availability and book your room.
+                </p>
               </div>
 
               <div className="faq-item">
-                <h3>What types of rooms are available?</h3>
-                <p>We offer various accommodation types including studio rooms, standard rooms, shared rooms, and special seasonal experiences. All rooms are specifically selected for student travelers.</p>
+                <h3>Is the surrounding area of the properties safe and convenient?</h3>
+                <p>
+                  Our properties are usually in a great location. They are close to universities and have convenient transport links with various amenities nearby. Most properties also have security staff and CCTV in place.
+                </p>
               </div>
+            </div>
+
+            <div className="faq-section">
+              <h2>Cancellations</h2>
 
               <div className="faq-item">
                 <h3>Can I cancel my booking?</h3>
-                <p>Yes, cancellation policies vary by property. Most bookings can be cancelled up to 24-48 hours before check-in. Check the specific cancellation policy when booking.</p>
+                <p>
+                  Yes, any cancellation fees are determined by the property and listed in your cancellation policy. You will pay any additional costs to the property.
+                </p>
               </div>
 
               <div className="faq-item">
-                <h3>What amenities are included?</h3>
-                <p>Each room listing shows the available amenities. Common amenities include WiFi, basic kitchen facilities, shared bathrooms, and study areas.</p>
+                <h3>If I need to cancel my booking, will I pay a fee?</h3>
+                <p>
+                  If you have a free cancellation booking, you won't pay a cancellation fee. If your booking is no longer free to cancel or is non-refundable, you may incur a cancellation fee. Any cancellation fees are determined by the property. You will pay any additional costs to the property.
+                </p>
+              </div>
+
+              <div className="faq-item">
+                <h3>Can I cancel or change my dates for a non-refundable booking?</h3>
+                <p>
+                  Changing your dates for ‘Non-Refundable’ bookings isn't possible. If you choose to cancel your booking, you may incur charges. Any cancellation fees are determined by the property. You will pay any additional costs to the property.
+                </p>
+              </div>
+
+              <div className="faq-item">
+                <h3>Where can I find my property's cancellation policy?</h3>
+                <p>
+                  You can find this in your booking confirmation.
+                </p>
+              </div>
+
+              <div className="faq-item">
+                <h3>How do I know if my booking was cancelled?</h3>
+                <p>
+                  After you cancel a booking with us, you should receive an email confirming the cancellation. Check your inbox and spam/junk mail folders. If you don’t receive an email within 24 hours, please contact the property to confirm they got your cancellation.
+                </p>
               </div>
             </div>
 
-            <div className="faq-section">
-              <h2>Payment & Pricing</h2>
-
-              <div className="faq-item">
-                <h3>What payment methods do you accept?</h3>
-                <p>We accept major credit cards, debit cards, and digital payment methods. All transactions are secure and encrypted.</p>
-              </div>
-
-              <div className="faq-item">
-                <h3>Are there any hidden fees?</h3>
-                <p>No, we believe in transparent pricing. The price you see is the price you pay, including all taxes and service fees.</p>
-              </div>
-
-              <div className="faq-item">
-                <h3>When is payment charged?</h3>
-                <p>Payment is typically charged at the time of booking confirmation. For some properties, you may pay a deposit first and the remainder upon arrival.</p>
-              </div>
-            </div>
-
-            <div className="faq-section">
+            {/* <div className="faq-section">
               <h2>Account & Support</h2>
 
               <div className="faq-item">
@@ -81,16 +101,16 @@ export default function FaqPage() {
 
               <div className="faq-item">
                 <h3>How can I contact customer support?</h3>
-                <p>You can reach our support team at info@boddop.com. We typically respond within 24 hours during business days.</p>
+                <p>You can reach our support team at info@wudgo.com. We typically respond within 24 hours during business days.</p>
               </div>
 
               <div className="faq-item">
                 <h3>Can I update my profile information?</h3>
                 <p>Yes, you can update your profile information, including your university details, at any time through your account settings.</p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="faq-section">
+            {/* <div className="faq-section">
               <h2>Safety & Security</h2>
 
               <div className="faq-item">
@@ -100,14 +120,14 @@ export default function FaqPage() {
 
               <div className="faq-item">
                 <h3>What should I do if I have an issue with my accommodation?</h3>
-                <p>Contact our support team immediately at info@boddop.com. We'll work to resolve any issues and ensure you have a positive experience.</p>
+                <p>Contact our support team immediately at info@wudgo.com. We'll work to resolve any issues and ensure you have a positive experience.</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="contact-section">
               <h2>Still have questions?</h2>
               <p>If you can't find the answer you're looking for, don't hesitate to contact us:</p>
-              <p><strong>Email:</strong> info@boddop.com</p>
+              <p><strong>Email:</strong> info@wudgo.com</p>
               <p><strong>Address:</strong> 592, 1007 N Orange St. 4th Floor, Wilmington, DE, New Castle, US, 19801</p>
             </div>
           </div>

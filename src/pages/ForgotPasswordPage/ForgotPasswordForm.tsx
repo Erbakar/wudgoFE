@@ -14,8 +14,9 @@ export function ForgotPasswordForm() {
 
   const ForgotPasswordSchema = z.object({
     emailAddress: z
-      .email({ error: "Geçersiz e-posta adresi" })
-      .min(1, { message: ('E-posta adresi gerekli') }),
+      .email({ error: "Invalid e-mail address" })
+      // .email({ error: "Geçersiz e-posta adresi" })
+      .min(1, { message: ('E-mail address required') }),
   });
 
   type Values = z.infer<typeof ForgotPasswordSchema>;
@@ -74,14 +75,14 @@ export function ForgotPasswordForm() {
         <input type="email" id="email" {...register("emailAddress", { required: true })} />
         {errors.emailAddress && <span className='error'>{errors.emailAddress.message}</span>}
       </div>
-      <div className="attention-text">
+      {/* <div className="attention-text">
         <p>
           Attention Please
         </p>
         <span>
           Only avaliable for University Students
         </span>
-      </div>
+      </div> */}
 
       <input type="submit" value="SUBMIT" className="btn-primary" disabled={isPending} />
 

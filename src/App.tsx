@@ -1,20 +1,22 @@
-import { Route, Routes } from 'react-router';
-import DefaultLayout from './layouts/DefaultLayout';
-import { NavigationContextProvider } from './contexts/NavigationContext';
-import SignUpPage from './pages/SignUpPage';
-import HomePage from './pages/HomePage';
-import routes from './routes';
+// App.tsx code:
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SnackbarProvider } from 'notistack';
-import EmailConfirmation from './pages/EmailConfirmationPage';
-import SignInPage from './pages/SignInPage';
+import { Route, Routes } from 'react-router';
 import { AuthContextProvider } from './contexts/AuthContext';
+import { NavigationContextProvider } from './contexts/NavigationContext';
+import DefaultLayout from './layouts/DefaultLayout';
+import GuestLayout from './layouts/GuestLayout';
+import EmailConfirmationPage from './pages/EmailConfirmationPage';
 import FaqPage from './pages/FaqPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import HomePage from './pages/HomePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import TermsOfUsePage from './pages/TermsOfUsePage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
 import SitemapPage from './pages/SitemapPage';
-import GuestLayout from './layouts/GuestLayout';
+import TermsOfUsePage from './pages/TermsOfUsePage';
+import routes from './routes';
 
 function AppRoutes() {
   return (
@@ -24,7 +26,8 @@ function AppRoutes() {
           <Route path={routes.signUp.routeFormat} element={<SignUpPage />} />
           <Route path={routes.signIn.routeFormat} element={<SignInPage />} />
           <Route path={routes.forgotPassword.routeFormat} element={<ForgotPasswordPage />} />
-          <Route path={routes.emailConfirmation.routeFormat} element={<EmailConfirmation />} />
+          <Route path={routes.resetPassword.routeFormat} element={<ResetPasswordPage />} />
+          <Route path={routes.emailConfirmation.routeFormat} element={<EmailConfirmationPage />} />
         </Route>
 
         <Route element={<DefaultLayout />}>
@@ -42,7 +45,6 @@ function AppRoutes() {
   );
 }
 
-// Create a client
 const queryClient = new QueryClient();
 
 function App() {

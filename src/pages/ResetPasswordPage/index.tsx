@@ -1,17 +1,18 @@
-import { SignUpForm } from './SignUpForm';
+import { ResetPasswordForm } from './ResetPasswordForm';
 
-export default function () {
-  return (
+
+export default function ResetPasswordPage(){
+  return(
     <>
       {/* <!--ACCOUNT SIGNUP START--> */}
       <div className="page-container account">
         <div className="page-container--inner">
           <div className="content">
             <h1>
-              REGISTER WUDGO
+              RESET PASSWORD WUDGO
             </h1>
 
-            <SignUpForm />
+            <ResetPasswordForm />
           </div>
         </div>
       </div>

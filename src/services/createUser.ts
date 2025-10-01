@@ -8,7 +8,11 @@ type Request = {
   username: string,
   email: string,
   password: string,
-  photo?: string
+  photo?: string,
+  invitationCode?: string,
+  // TODO
+  // birthDate: string,
+  // gender?:string,
 };
 
 async function createUser(request: Request): Promise<[ResponseModel<UserDto>, Response]> {

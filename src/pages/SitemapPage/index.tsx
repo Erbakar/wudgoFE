@@ -7,7 +7,7 @@ export default function SitemapPage(){
         <div className="page-container--inner">
             <div className="content">
                 <h1>Sitemap</h1>
-                <p className="last-updated">Last updated: December 2023</p>
+                <p className="last-updated">Last updated: January 2025</p>
                 
                 <div className="terms-section">
                     <h2>Main Pages</h2>
@@ -47,7 +47,7 @@ export default function SitemapPage(){
                 <div className="terms-section">
                     <h2>Legal & Policies</h2>
                     <ul>
-                        <li><a href="./terms-of-use.html">Terms of Use</a> - Terms and conditions for using Boddop</li>
+                        <li><a href="./terms-of-use.html">Terms of Use</a> - Terms and conditions for using Wudgo</li>
                         <li><a href="./privacy-policy.html">Privacy Policy</a> - How we collect and use your information</li>
                         <li><a href="./sitemap.html">Sitemap</a> - This page - complete list of all pages</li>
                     </ul>
@@ -55,7 +55,7 @@ export default function SitemapPage(){
 
                 <div className="terms-section">
                     <h2>About This Sitemap</h2>
-                    <p>This sitemap provides a complete overview of all pages available on the Boddop website. Our platform is designed specifically for university students to find affordable travel accommodations around the world.</p>
+                    <p>This sitemap provides a complete overview of all pages available on the Wudgo website. Our platform is designed specifically for university students to find affordable travel accommodations around the world.</p>
                     
                     <h3>Quick Navigation Tips:</h3>
                     <ul>
@@ -71,7 +71,7 @@ export default function SitemapPage(){
                     <h2>Contact Information</h2>
                     <p>If you can't find what you're looking for or need additional assistance, please contact us:</p>
                     <ul>
-                        <li><strong>Email:</strong> info@boddop.com</li>
+                        <li><strong>Email:</strong> info@wudgo.com</li>
                         <li><strong>Address:</strong> 592, 1007 N Orange St. 4th Floor, Wilmington, DE, New Castle, US, 19801</li>
                     </ul>
                 </div>

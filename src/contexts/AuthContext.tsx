@@ -1,48 +1,54 @@
-import { createContext, useContext, useState, type PropsWithChildren } from 'react';
+// AuthContext.tsx code:
+import { createContext, useContext, useEffect, useMemo, useState, type PropsWithChildren } from 'react';
+import type { UserDto } from '../contracts/UserDto';
+import { getAuthUser, removeAuthUser, setAuthUser } from '../utils/authStorage';
 
-type AuthContext = {
-  token: string | null;
-  setToken: (value: string | null) => void;
+type AuthContextType = {
+  user: UserDto | null;
+  signIn: (user: UserDto) => void;
+  signOut: () => void;
 };
 
-const authContext = createContext<AuthContext>({
-  token: null,
-  setToken: () => {}
-});
+const authContext = createContext<AuthContextType | undefined>(undefined);
 
 
-
-export function useAuthContext() {
-  const aContext = useContext(authContext);
-
-  const signIn = (token: string) => {
-    aContext.setToken(token);
-  };
-
-  const signOut = () => {
-    aContext.setToken(null);
-  };
-
-  return {
-    token: aContext.token,
-    signIn,
-    signOut,
-  };
+export function useAuth() {
+  const context = useContext(authContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthContextProvider');
+  }
+  return context;
 }
 
 export function AuthContextProvider({ children }: PropsWithChildren) {
-  const [token, setToken] = useState<string | null>(null);
+  // const [token, setToken] = useState<string | null>(getAuthToken());
+  const [user, setUser] = useState<UserDto | null>(getAuthUser());
 
-  const _AuthContextProvider = authContext.Provider;
+  useEffect(() => {
+    if (user) {
+      setAuthUser(user); // Calls the function to save token and user data
+    } else {
+      removeAuthUser(); // Calls the function to clear both
+    }
+  }, [user]);
+
+  const signIn = (newUser: UserDto) => {
+    setUser(newUser);
+  };
+
+  const signOut = () => {
+    setUser(null);
+  };
+
+  const value = useMemo(() => ({
+    user,
+    signIn,
+    signOut,
+  }), [user]);
 
   return (
-    <>
-      <_AuthContextProvider value={{
-        token: token,
-        setToken: setToken
-      }}>
-        {children}
-      </_AuthContextProvider>
-    </>
-  )
+    <authContext.Provider value={value}>
+      {children}
+    </authContext.Provider>
+  );
 }

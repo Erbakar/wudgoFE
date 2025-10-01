@@ -8,7 +8,7 @@ export default function () {
         <div className="page-container--inner">
           <div className="content">
             <h1>
-              SIGN IN BODDOP
+              SIGN IN WUDGO
             </h1>
 
             <SignInForm />

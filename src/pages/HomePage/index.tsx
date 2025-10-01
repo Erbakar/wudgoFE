@@ -1,3 +1,4 @@
+// index.tsx (HomePage) code:
 import { useState } from 'react';
 import usePageStartScroll from '../../hooks/usePageStartScroll';
 import { usePlaces } from '../../services/getPlaces';
@@ -8,13 +9,14 @@ export default function HomePage() {
   const [minD, setMinD] = useState('');
   const [maxD, setMaxD] = useState('');
 
-  setMinD('');
-  setMaxD('');
+  if (minD.length > 1 && maxD.length > 1) {
+    setMinD('');
+    setMaxD('');
+  }
 
   usePageStartScroll();
 
   const { data,
-    // error, isLoading
   } = usePlaces({
     query: searchQuery,
     currency: 'USD',
